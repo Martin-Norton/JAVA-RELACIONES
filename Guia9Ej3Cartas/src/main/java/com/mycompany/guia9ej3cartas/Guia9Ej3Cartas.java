@@ -3,23 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package com.mycompany.guia9ej2ruleta;
+package com.mycompany.guia9ej3cartas;
 
-import Servicio.JuegoServicio;
-import Servicio.JugadorServicio;
+import Carta.Service.CartaServicio;
 
 /**
  *
  * @author Martin Norton
  */
-public class Guia9Ej2Ruleta {
+public class Guia9Ej3Cartas {
 
     public static void main(String[] args) {
-        JuegoServicio js = new JuegoServicio();
-        JugadorServicio jjs = new JugadorServicio();
-        
-        js.llenarJuego();
-        jjs.disparo();
-        js.ronda();
+        CartaServicio cs = new CartaServicio();
+        cs.generarBaraja();
+        cs.mostrarBaraja();
     }
 }

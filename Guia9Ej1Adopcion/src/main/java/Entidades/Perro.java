@@ -13,6 +13,7 @@ import Enumeraciones.RazaPerro;
 public class Perro {
     private String nombre , tamaño , raza;
     private int edad;
+    private Boolean adoptado=false;
 
     public Perro() {
     }
@@ -24,6 +25,13 @@ public class Perro {
         this.edad = edad;
     }
 
+    public Boolean getAdoptado() {
+        return adoptado;
+    }
+
+    public void setAdoptado(Boolean adoptado) {
+        this.adoptado = adoptado;
+    }
     public String getNombre() {
         return nombre;
     }

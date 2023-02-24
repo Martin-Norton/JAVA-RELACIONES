@@ -11,7 +11,7 @@ package Entidades;
 public class Jugador {
     private Integer id ;
     private String nombre;
-    private Boolean mojado=true;
+    private Boolean mojado=false;
 
     public Jugador() {
     }
@@ -45,6 +45,12 @@ public class Jugador {
     public void setMojado(Boolean mojado) {
         this.mojado = mojado;
     }
+
+    @Override
+    public String toString() {
+        return "Jugador{" + "id=" + id + ", nombre=" + nombre + ", mojado=" + mojado + '}';
+    }
+    
     
     
 }

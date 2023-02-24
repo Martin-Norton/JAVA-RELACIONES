@@ -5,6 +5,7 @@
 package Servicio;
 
 import Entidades.Jugador;
+import Entidades.Revolver;
 
 
 /**
@@ -13,17 +14,23 @@ import Entidades.Jugador;
  */
 public class JugadorServicio {
     Jugador j = new Jugador();
+    RevolverServicio r = new RevolverServicio();
     
-    public Boolean disparo(RevolverServicio r){
-        Boolean disp;
-        if (r.mojar()) {
+    public Boolean disparo(){
+        System.out.println("disparo");
+        System.out.println(r.toString());
+        r.mostrarRevolver();
+        Boolean disp= true;
+
+        if (r.mojar()==true) {
             j.setMojado(false);
-            
+            disp=true;
         }else{
+            disp=false;
             r.siguienteChorro();
     
         }
         
-        return !(j.getMojado());
+        return (disp);
     }
 }
